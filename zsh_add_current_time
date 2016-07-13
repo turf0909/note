@@ -1,0 +1,8 @@
+/* add current time to the zsh terminal */
+setopt PROMPT_SUBST
+PROMPT='%B%F{white}%n%f%F{green}[%D{%L:%M:%S}]%f:%F{yellow}${${(%):-%~}}%f$ %b'
+TMOUT=1
+
+TRAPALRM() {
+    zle reset-prompt
+}
